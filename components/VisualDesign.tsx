@@ -7,7 +7,7 @@ export default function VisualDesign() {
   }
 
   return (
-    <section className="bg-white px-5 py-20 md:px-8">
+    <section className="px-5 py-20 md:px-8">
       <div className="mx-auto max-w-7xl border-t border-foreground/10 pt-10">
         <div className="grid gap-8 md:grid-cols-[0.35fr_0.65fr]">
           <div>
@@ -35,7 +35,7 @@ export default function VisualDesign() {
                 </p>
                 <h3 className="mt-1 text-xl font-semibold">{work.title}</h3>
                 {work.description && (
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+                  <p className="mt-3 text-base leading-relaxed text-foreground/70">
                     {work.description}
                   </p>
                 )}

@@ -13,7 +13,14 @@ const capabilityGroups = [
     summary: "React / Next.js 기반 인터페이스 구현",
     description:
       "디자인 의도와 사용자 흐름을 HTML/CSS, TypeScript, React, Next.js 기반의 실제 화면으로 구현합니다.",
-    items: ["HTML / CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    items: [
+      "HTML / CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+    ],
   },
   {
     title: "Engineering",
@@ -40,7 +47,7 @@ const capabilityGroups = [
 
 export default function Capability() {
   return (
-    <section id="capability" className="bg-white px-5 py-24 md:px-8">
+    <section id="capability" className="px-5 py-24 md:px-8">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.35fr_0.65fr]">
         <div>
           <p className="text-sm font-medium uppercase text-foreground/50">
@@ -53,7 +60,7 @@ export default function Capability() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {capabilityGroups.map((group) => (
-            <section
+            <section data-reveal
               key={group.title}
               className={`border-t pt-5 ${
                 group.emphasis
@@ -75,11 +82,7 @@ export default function Capability() {
                   {group.summary}
                 </p>
               </div>
-              <p
-                className={`mt-5 leading-relaxed text-foreground/65 ${
-                  group.emphasis ? "text-base" : "text-sm"
-                }`}
-              >
+              <p className="mt-5 text-base leading-relaxed text-foreground/65">
                 {group.description}
               </p>
               <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2">

@@ -49,6 +49,7 @@ export type FeaturedProject = BaseProject & {
 export type StandardProject = BaseProject & {
   variant: "standard";
   context: string;
+  designApproach: string;
   focus: string;
   implementation: string[];
 };
@@ -129,16 +130,15 @@ export const projects: Project[] = [
       "화면 구조를 단순화하고 불필요한 재요청을 줄여 재진입 경험을 개선했습니다.",
     image: "/assets/sosoeat/sosoeat-sosotalk-desktop.png",
     imageAlt: "SOSOEAT 소소Talk 화면 스크린샷",
-    status: "완료",
     links: [
-      { label: "GitHub", href: "https://github.com/sw61/sosoeat" },
-      { label: "Live", href: "https://sosoeat.vercel.app/home" },
+      { label: "View source code", href: "https://github.com/sw61/sosoeat" },
+      { label: "Try live demo", href: "https://sosoeat.vercel.app/home" },
       {
-        label: "Figma Deck",
+        label: "View Figma presentation",
         href: "https://www.figma.com/deck/EzktjUb9RepmTAnqSb6jQ9",
       },
       {
-        label: "Figma Design",
+        label: "View Figma design",
         href: "https://www.figma.com/design/Oe8siqCQZcWZsd6hpcHc16/%EA%B3%A0%EC%96%91%EC%9D%B4%EB%8A%94-9%EC%97%BD%EA%B5%B0?node-id=2788-93306&t=Bl2b1jFBnC7Stw6J-1",
       },
     ],
@@ -155,7 +155,9 @@ export const projects: Project[] = [
     role: "Frontend",
     stack: ["React", "React Router", "Styled-components", "Firebase"],
     context:
-      "SNS 인터페이스 구조를 재설계하고 반응형 UI로 구현한 팀 프로젝트입니다.",
+      "기존 SNS 구조를 바탕으로 게시글 작성·상세·댓글·프로필 경험을 재구성한 프로젝트입니다.",
+    designApproach:
+      "게시글 작성·상세·댓글·프로필로 이어지는 SNS 흐름을 재구성했습니다. 게시글 상세는 데스크톱에서 2단 모달, 모바일에서는 전체 화면으로 전환해 화면 크기에 맞게 읽고 탐색할 수 있도록 설계했습니다.",
     focus: "게시글 작성, 상세, 댓글, 프로필 흐름 구현",
     implementation: [
       "Firebase 인증",
@@ -164,15 +166,14 @@ export const projects: Project[] = [
     ],
     image: "/assets/facebook-main.png",
     imageAlt: "Facebook Redesign 메인 화면 스크린샷",
-    status: "완료",
     links: [
       {
-        label: "GitHub",
+        label: "View source code",
         href: "https://github.com/yerixx/Teamproject_Facebook_EZ",
       },
-      { label: "Live", href: "https://facebook-ez.web.app" },
+      { label: "Try live demo", href: "https://facebook-ez.web.app" },
       {
-        label: "Figma",
+        label: "View Figma presentation",
         href: "https://www.figma.com/design/UIa8NNVo6q69Onj8Sl7w1w/-%EC%A0%95%EB%A9%B4%EB%8F%8C%ED%8C%8C-Facebook--Copy-?node-id=1625-2",
       },
     ],
@@ -189,7 +190,9 @@ export const projects: Project[] = [
     role: "Frontend",
     stack: ["HTML", "CSS", "JavaScript", "Firebase"],
     context:
-      "커머스 상품 탐색과 구매 흐름을 HTML/CSS/JavaScript로 재구성한 팀 프로젝트입니다.",
+      "상품 탐색부터 구매까지 이어지는 커머스 화면을 HTML/CSS/JavaScript로 재구성한 프로젝트입니다.",
+    designApproach:
+      "상품 목록·상세·장바구니로 이어지는 구매 흐름을 재구성했습니다. 상세 화면에는 고정 구매 영역을 두고, 리뷰 이미지는 모달로 확인하도록 해 구매 정보와 보조 콘텐츠를 구분했습니다.",
     focus: "상품 목록, 상세, 장바구니 흐름 구현",
     implementation: [
       "상품 목록과 상품 상세 화면",
@@ -198,11 +201,11 @@ export const projects: Project[] = [
     ],
     image: "/assets/oliveyoung-main.png",
     imageAlt: "Olive Young Redesign 메인 화면 스크린샷",
-    status: "완료, GitHub Private",
+    status: "GitHub Private",
     links: [
-      { label: "Live", href: "https://oliveyoung-yesshow.web.app/" },
+      { label: "Try live demo", href: "https://oliveyoung-yesshow.web.app/" },
       {
-        label: "Figma",
+        label: "View Figma presentation",
         href: "https://www.figma.com/design/mYBfR5Cm27lJElWLcboG8m/Olive-Yong_ReDesign-Team-Project?node-id=1390-14",
       },
     ],
